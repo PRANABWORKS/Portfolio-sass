@@ -9,14 +9,12 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  background-color: #333333;
-}
 body header {
   background-color: rgb(183, 192, 192);
   height: 4rem;
+  box-shadow: 2px 2px 5px 2px rgb(255, 255, 255);
 }
-body header .nav-left, body header .nav-middle, body header .menu-nav, body header .menu-nav_item {
+body header .nav-left, body header .nav-middle, body header .menu-nav, body header .menu-nav_item, body header .nav-right {
   display: inline-block;
 }
 body header .nav-left {
@@ -28,10 +26,10 @@ body header .nav-middle {
   margin-top: 1rem;
   left: 50rem;
 }
-body header .menu-nav {
+body header .nav-middle .menu-nav {
   list-style: none;
 }
-body header a {
+body header .nav-middle a {
   text-decoration: none;
   font-size: 1.5rem;
   margin-right: 1rem;
@@ -39,41 +37,55 @@ body header a {
   /* visited link */
   /* mouse over link */
 }
-body header a:link {
+body header .nav-middle a:link {
   color: #ffffff;
 }
-body header a:visited {
+body header .nav-middle a:visited {
   color: #000000;
 }
-body header a:hover {
+body header .nav-middle a:hover {
   color: hotpink;
 }
-body header a:active {
+body header .nav-middle a:active {
   text-decoration: underline;
+}
+body header .nav-right {
+  float: right;
+  margin-right: 4rem;
+  margin-top: 0.6rem;
+}
+body header .nav-right img {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
 }
 body main .home {
   width: 100%;
   height: 100%;
   padding-top: 20rem;
+  background-image: url("/dist/img/IMG_20210923_080334_319.webp");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 body main .home h1 {
   font-size: 5rem;
   text-align: center;
-  color: crimson;
+  color: #dc143c;
 }
 body main .home h2 {
   text-align: center;
-  color: cadetblue;
+  color: #000000;
 }
 body main .home .social-icons {
-  margin-top: 23rem;
+  margin-top: 25rem;
   padding-left: 62rem;
-  margin-bottom: 1.5rem;
 }
 body main .home .social-icons a {
   margin: 1rem;
+  padding-bottom: 1rem;
 }
-body main .home footer {
+body main .footer {
   padding-left: 1rem;
   background-color: rgb(183, 192, 192);
 }
