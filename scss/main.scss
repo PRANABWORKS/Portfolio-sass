@@ -1,23 +1,10 @@
-$mainFont:'Roboto', sans-serif;
-$headColor:rgb(183, 192, 192);
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62.5%;
-    font-family: $mainFont;
-}
+@import url("variables");
+@import url("resets");
 
 body{
         
 header{
-    background-color:$headColor;
+    background-color:$primaryColor;
     height: 4rem;
     box-shadow: 2px 2px 5px 2px rgb(255, 255,255 );
 
@@ -25,6 +12,7 @@ header{
         display: inline-block;
     }
   .nav-left{
+    display: none;
     margin-top: 1rem;
     margin-left: 1rem;
   }
@@ -39,7 +27,7 @@ header{
     }
     a{
 
-        text-decoration: none;
+        text-decoration: underline; 
         font-size: 1.5rem;
         margin-right: 1rem;
 
@@ -109,7 +97,7 @@ main{
   }
   .footer{
     padding-left: 1rem;
-    background-color: $headColor;
+    background-color: $primaryColor;
    } 
 }
 }
