@@ -1,103 +1,135 @@
-@import url("variables");
-@import url("resets");
+@import 'resets';
+@import 'variables';
+@import 'menu';
+@import 'home';
+@import 'about';
+@import 'projects';
+@import 'responsive';
 
 body{
-        
-header{
-    background-color:$primaryColor;
-    height: 4rem;
-    box-shadow: 2px 2px 5px 2px rgb(255, 255,255 );
+    background-color: $accentColor;
+    color: set-text-color($accentColor);
+    height: 100vh;
+    font-family: $mainFont;
+    line-height: 1;
+    overflow: hidden;
 
-    .nav-left,.nav-middle,.menu-nav,.menu-nav_item,.nav-right{
-        display: inline-block;
+    h1{
+        font-weight: fontWeights(bold);
     }
-  .nav-left{
-    display: none;
-    margin-top: 1rem;
-    margin-left: 1rem;
-  }
-    .nav-middle{
-        position: absolute;
-        margin-top: 1rem;
-        left: 50rem;
-        
-    
-    .menu-nav{
+
+    h2,h3{
+        font-weight: fontWeights(thin);
+    }
+
+    li{
         list-style: none;
     }
     a{
-
-        text-decoration: underline; 
-        font-size: 1.5rem;
-        margin-right: 1rem;
-
-       /* unvisited link */
-&:link {
-    color: #ffffff;
-  }
-  
-  /* visited link */
-  &:visited {
-    color: #000000;
-  }
-  
-  /* mouse over link */
-  &:hover {
-    color: hotpink;
-  }
-  &:active {
-    text-decoration: underline;
-  }
-    }
-}
-.nav-right{
-  float: right;
-  margin-right: 4rem;
-  margin-top: .6rem;
-  img{
-    position: absolute;
-  width: 3rem;
-  height:3rem;
-  border-radius: 50%;
-  
-  }
-}
-}
-
-main{
-  .home{
-    width: 100%;
-    height: 100%;
-    padding-top: 20rem;
-    background-image: url("/dist/img/IMG_20210923_080334_319.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    
-
-    h1{
-      font-size: 5rem;
-      text-align: center;
-      color: #dc143c;
-    }
-    h2{
-      text-align: center;
-      color: #000000;
-    }
-    .social-icons{
-      margin-top: 25rem;
-      padding-left: 62rem;
-    
-
-      a{
-        margin: 1rem;
-        padding-bottom: 1rem;
-      }
+        text-decoration: none;
     }
     
-  }
-  .footer{
-    padding-left: 1rem;
-    background-color: $primaryColor;
-   } 
-}
+
+    header{
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+
+        .nav-left{
+            width: 24px;
+            height: 24px;
+            margin-left: 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            @include transition-ease;
+            
+            .menu-nav_burger{
+                position: absolute;
+                left: 1rem;
+                top: 2rem;
+                width: 24px;
+                height: 3px;
+                background: set-text-color($accentColor);
+                @include transition-ease;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: -8px;
+                    width: 24px;
+                    height: 3px;
+                    background: set-text-color($accentColor);
+                    @include transition-ease;
+            }
+        
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                    width: 24px;
+                    height: 3px;
+                    background: set-text-color($accentColor);
+                    @include transition-ease;
+                }
+              
+                &.show{
+                    transform: rotate(720deg);
+                    background: transparent;
+
+                    &::before{
+                        transform: rotate(45deg) translate(5px, 8px);
+                    }
+                    &::after{
+                        transform: rotate(-45deg) translate(3px,-7px);
+                    }                
+                }
+            }         
+        }
+
+        .nav-right{
+            margin-top: .5rem;
+            margin-right: 1rem;
+        
+            img{
+               
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    main{
+        position: absolute;
+        top: 0;
+
+        .social-icons{
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            
+
+            a{
+                margin: .5rem;
+                color: set-text-color($accentColor);
+                @include transition-ease;
+
+                &:hover{
+                    color: $secondaryColor;
+                }
+            }
+        }
+
+        footer{
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            color: set-text-color($accentColor);
+            margin-right: 1rem;
+        }
+    }
+
 }

@@ -1,0 +1,33 @@
+@include media-md{
+
+    .nav-left{
+        
+        visibility: hidden;
+        
+    }
+
+    .nav{
+
+        .nav-middle{
+            visibility: visible;
+            transform: none;
+            height: auto;
+            
+
+            .menu-nav{
+
+            &_item{
+                display: inline;
+                margin-right: 1rem;
+            }
+            
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: fontWeights(regular);
+            }
+        }
+        }
+    }
+}

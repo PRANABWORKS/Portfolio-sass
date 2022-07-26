@@ -1,0 +1,66 @@
+
+.bio{
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    margin-bottom: 1rem;
+    
+    &_image{
+    height: 50vh;
+    text-align: center;
+    padding-top: 35vh;
+    overflow: hidden;
+    background:linear-gradient(
+        to right,
+        rgba($accentColor, 0.7),
+        rgba($accentColor, 0.3)
+      ),
+    url('../img/IMG_20210923_080334_319.webp') left;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    color: set-text-color($accentColor);
+    font-weight: fontWeights(regular);
+
+    &_header{
+        font-size: 2rem;
+        margin: 1rem;
+        color: $secondaryColor;
+    }
+
+    &_text{
+        margin-inline: 1rem;
+        margin-bottom: 0;
+        font-weight: fontWeights(medium);
+        line-height: 1.2;
+        overflow: hidden;
+    }
+}
+.jobs{
+    width: 70vw;   
+    margin: auto;
+
+    &_job{
+        background-color: $primaryColor;      
+        margin-top: 1rem;
+        padding: 1rem;
+        line-height: 1.5;
+        border-bottom: 2px solid $secondaryColor;
+        color: set-text-color($primaryColor);
+
+        h1{
+            color: $secondaryColor;
+        }
+    }
+}
+.social-icons{
+      display: flex;
+      flex-direction: column;
+      transform: translateY(-30px) ;
+}
+footer{
+    transform: rotate(90deg) 
+    translate(-7rem,-2rem);   
+}
+}
+
+

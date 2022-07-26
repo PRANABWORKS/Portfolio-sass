@@ -6,5 +6,37 @@
 
 html{
     font-size: 62.5%;
-    font-family: $mainFont;
 }
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
+
+  @mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+  }
+
+  @function fontWeights($weight){
+    @return map-get($font-weights,$weight);
+  }
+
+  @mixin media-md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+  

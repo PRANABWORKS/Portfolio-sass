@@ -1,0 +1,41 @@
+.home{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 40vh;
+    overflow: hidden;
+    background:linear-gradient(
+        to right,
+        rgba($accentColor, 0.7),
+        rgba($accentColor, 0.3)
+      ),
+    url('../img/IMG_20210923_080334_319.webp') left;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    color: set-text-color($accentColor);
+    font-weight: fontWeights(thin);
+    cursor: pointer;
+    
+    &_name{
+        font-size: 5rem;
+        font-weight:fontWeights(regular);
+        margin-bottom: 1rem;
+        color: $primaryColor;
+        border-bottom: 2px solid set-text-color($accentColor);
+        @include transition-ease;
+
+        &:hover{
+            color: $secondaryColor;
+        }
+
+        &--last{
+            font-weight:fontWeights(bold);
+            color: $secondaryColor;
+
+            &:hover{
+                color: rgba($accentColor, 0.3);
+            }
+        }
+
+    }
+}
