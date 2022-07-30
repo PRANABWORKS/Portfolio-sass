@@ -29,8 +29,13 @@ html{
       @content;
     }
   }
+  @mixin media-md-lg {
+    @media screen and (min-width: 820px) and (max-width:912) {
+      @content;
+    }
+  }
   @mixin media-lg {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 913px) {
       @content;
     }
   }

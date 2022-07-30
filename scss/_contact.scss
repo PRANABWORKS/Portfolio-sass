@@ -1,0 +1,64 @@
+
+    main{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: $primaryColor;
+        display: flex;
+        flex-wrap: coloumn wrap;
+        justify-content: center;
+        align-items: center;
+
+
+    .contact{
+        h2{
+            font-size: 4rem;
+            font-weight: fontWeights(bold);
+            text-align: center;
+            margin-bottom: 1rem;
+            color: $secondaryColor;
+        }
+
+        &_list{
+            font-size: 2rem;
+            font-weight: fontWeights(regular);
+            text-align: center;
+
+            .text-secondary{
+                color: set-text-color($primaryColor);
+            }
+        }
+
+        &_email{
+            margin-bottom: 1rem;
+        }
+
+        &_phone{
+            margin-bottom: 1rem;
+        }
+
+        &_address{
+            margin-bottom: 1rem;
+        }
+        
+        
+        .social-icons{
+            position: relative;
+            margin-top: 2rem;
+            text-align: center;
+
+            a{
+                color: set-text-color($accentColor);
+            }
+           
+        }
+
+        footer{
+            right: 50%;
+            transform: translate(50%);
+            color: set-text-color($primaryColor);
+            text-align: center;   
+        }
+    
+}
+    }

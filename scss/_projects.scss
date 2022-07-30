@@ -4,12 +4,12 @@
     width: 100vw;
     overflow: scroll;
     margin-bottom: 1rem;
-    
+        
     &_image{
     height: 40vh;
+    
     text-align: center;
-    padding-top: 30vh;
-    overflow: hidden;
+    padding-top: 30vh;  
     background:linear-gradient(
         to right,
         rgba($accentColor, 0.7),
@@ -18,8 +18,7 @@
     url('../img/IMG_20210923_080334_319.webp') left;
     background-size: cover;
     background-repeat: no-repeat; 
-    color: set-text-color($accentColor);
-    font-weight: fontWeights(regular);
+    
 
     &_header{
         font-size: 2rem;
@@ -28,31 +27,75 @@
     }
 }
 
-.projects_items{
-    width: 70vw;   
-    margin: auto;
-    display: flex;
-    flex-direction: column wrap;
+&_items {
+      width: 60vw;
+      margin: 2rem auto 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;    
 }
 
-.projects_item{
-    margin-top: 1rem;
+&_item {
+      position: relative;
+      border-bottom: 5px solid $secondaryColor;
+      overflow: hidden;
+      cursor: pointer;
 
-    &_image{
-        width: 25vw;
-        height: 30vh;
+    &_image {
+        width: 100%;    
     }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $secondaryColor;
+        opacity: 0;
+        @include transition-ease;
+      }
+  
+      &:hover {
+        &::after {
+          top: 0;
+          opacity: 0.9;
+        }
+        .projects_btn {
+          opacity: 1;
+        }
+      }
 }
 
-.projects_btns{
-    
+&_btns {
+    position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      text-align: center;
     
 }
 
-    
+&_btn {
+    opacity: 0;
+    color: set-text-color($secondaryColor);
+    @include transition-ease;
 
+    &:hover {
+      color: set-text-color(set-text-color($secondaryColor));
+    }
+  }
 
-
+.social-icons{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-30px);
+}
 
 footer{
     transform: rotate(90deg) 

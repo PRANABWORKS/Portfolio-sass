@@ -4,6 +4,7 @@
 @import 'home';
 @import 'about';
 @import 'projects';
+@import 'contact';
 @import 'responsive';
 
 body{
@@ -31,10 +32,11 @@ body{
     
 
     header{
+        position: -webkit-sticky;
         position: sticky;
         display: flex;
         justify-content: space-between;
-        z-index: 2;
+        z-index: 3;
 
         .nav-left{
             width: 24px;
@@ -50,7 +52,7 @@ body{
                 top: 2rem;
                 width: 24px;
                 height: 3px;
-                background: set-text-color($accentColor);
+                background: set-text-color($accentColor);  
                 @include transition-ease;
 
                 &::before{
