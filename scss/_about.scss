@@ -50,6 +50,9 @@
         h1{
             color: $secondaryColor;
         }
+        p{
+            color: set-text-color($accentColor);
+        }
     }
 }
 .social-icons{

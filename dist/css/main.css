@@ -157,6 +157,9 @@ html {
 .bio .jobs_job h1 {
   color: #dc143c;
 }
+.bio .jobs_job p {
+  color: #fff;
+}
 .bio .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,6 +327,23 @@ main .contact footer {
 }
 
 @media screen and (min-width: 768px) {
+  main .bio_image_header {
+    font-size: 4rem;
+  }
+  main .bio_image_text {
+    font-size: 1.5rem;
+  }
+  main .bio .jobs_job h1, main .bio .jobs_job h2 {
+    font-size: 2rem;
+  }
+  main .bio .jobs_job p {
+    font-size: 2rem;
+  }
+  main .bio footer {
+    font-size: 1.75rem;
+    -webkit-transform: rotate(90deg) translate(-90px, -50px);
+            transform: rotate(90deg) translate(-90px, -50px);
+  }
   main .contact h2 {
     font-size: 7rem;
   }
@@ -334,7 +354,7 @@ main .contact footer {
     font-size: 3rem;
   }
 }
-@media screen and (min-width: 820px) and (max-width: 912) {
+@media screen and (min-width: 1024px) {
   .nav-left {
     visibility: hidden;
   }
@@ -354,26 +374,19 @@ main .contact footer {
     font-size: 1.5rem;
     font-weight: 400;
   }
-}
-@media screen and (min-width: 913px) {
-  .nav-left {
-    visibility: hidden;
+  main .bio_image_header {
+    font-size: 3rem;
   }
-  .nav .nav-middle {
-    visibility: visible;
-    -webkit-transform: none;
-            transform: none;
-    height: auto;
+  main .bio_image_text {
+    font-size: 1rem;
   }
-  .nav .nav-middle .menu-nav_item {
-    display: inline;
-    margin-right: 1rem;
+  main .bio .jobs_job p {
+    font-size: 1.25rem;
   }
-  .nav .nav-middle .menu-nav a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 400;
+  main .bio footer {
+    font-size: 1rem;
+    -webkit-transform: rotate(90deg) translate(-90px, -20px);
+            transform: rotate(90deg) translate(-90px, -20px);
   }
   main .projects_items {
     grid-template-columns: repeat(3, 1fr);
